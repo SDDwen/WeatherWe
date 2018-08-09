@@ -1,1 +1,20 @@
-<view class = "title">Hello Steve.CC</view>
+<view class='weather-wrapper'>
+  <image class='weather-bg' src='{{nowWeatherBg}}' mode='scaleToFill'></image>
+  <view class='temp'>{{nowTemp[0]}}°/{{nowTemp[1]}}°</view>
+  <view class='weather'>{{nowType}}</view>
+</view>
+<!-- <scroll-view scroll-x> -->
+<view class='forecast-list' style='background:#deeef6'>
+  <view class='forecast-item' wx:for='{{AirIndex}}'>
+    <text class='forecast-item-title'>{{item.title}}</text>
+    <text class='forecast-item-content'>{{item.content}}</text>
+  </view>
+</view>
+<!-- </scroll-view> -->
+<view class='tipBar'>
+  <view class = 'tip-titleBar'>
+     <image class='tip-titleBar-img' src='/images/lightrain-icon.png'></image> 
+    <text class='tip-title'>温馨提示</text>
+  </view>
+  <text class='tip-content'>今天天气{{tipContent}}</text>
+</view>
